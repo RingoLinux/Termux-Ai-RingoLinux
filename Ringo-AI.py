@@ -3,7 +3,7 @@ class Text_Conversation:
     "Class khai báo những thành phần về chào hỏi."
     def __init__(self,Name_Object="Người nào đó",Age_Object=0):
         self.Name_Object = Name_Object
-        self.Age_Object = Age_Obejct
+        self.Age_Object = Age_Object
     def Hello(self): 
         print("Xin chào {}! ".format(self.Name_Object))
     def What_Your_Name(self):
@@ -14,5 +14,4 @@ class Text_Conversation:
 #names = input("Tên người trước mặt: ")
 Name = Text_Conversation()
 Name.What_Your_Name()
-g
 
