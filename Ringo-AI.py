@@ -1,10 +1,14 @@
 import os
 import time
+from getpass import getpass
 
-class Install_Systen:
+
+
+class Install_System:
     pass
 class Setting_System:
-    pass
+    def Neofetch(self):
+        os.system('neofetch --off')
 class Text_Conversation:
     "Class khai báo những thành phần về chào hỏi."
     def __init__(self,Name_Object="Người nào đó",Age_Object=0):
@@ -44,45 +48,42 @@ class Ringo_System:
                 os.system("clear")
         
         if self.Login_Switch == "On":
-            try:
-                self.User_Player = str(input('\033[1;92mUsername \033[1;93m: '))
-                print("")
-                self.Password_Player = getpass('\033[1;92mPassword \033[1;93m: ')
-                print ("")
-                if self.User_Player == self.User_Login and self.Password_Player == Password_Login:
-                   print('wait...')
-                   time.sleep(1)
-                   os.system('clear')
-                   print('')
-                   print('\033[1;92m ────────────────────────────────────── ')
-                   print("")
-                   break
-                else:
-                      print("")
-                      print("")
-                      print("")
-                      print("")
-                      print("\033[1;91m     Wrong Password")
-                      time.sleep(2)
-                      print("")
-           except Exception:
-                      
-                      print("")
-                      print("")
-                      print("")
-                      print("")
-                      print("")
-                      print("\033[1;91m     Wrong Password")
-                      time.sleep(2)
-           except KeyboardInterrupt:
-                      print("")
-                      os.system('killall -9 com.termux')
-                      print("")
-                      print("")
-                      print("")
-                      print("")
-                      print("\033[1;91m     Wrong Password")
-                      time.sleep(2)
+            while True:
+                try:
+                    self.User_Player = str(input('\033[1;92mUsername \033[1;93m: '))
+                    self.Password_Player = getpass('\033[1;92mPassword \033[1;93m: ')
+                    if self.User_Player == self.User_Login and self.Password_Player == self.Password_Login:
+                        print('wait...')
+                        time.sleep(1)
+                        os.system('clear')
+                        print('\033[1;92m ────────────────────────────────────── ')
+                        print("")
+                        break
+                    else:
+                        print("")
+                        print("")
+                        print("")
+                        print("")
+                        print("\033[1;91m     Wrong Password")
+                        time.sleep(2)
+                        print("")
+                except Exception:
+                    print("")
+                    print("")
+                    print("")
+                    print("")
+                    print("")
+                    print("\033[1;91m     Wrong Password")
+                    time.sleep(2)
+                except KeyboardInterrupt:
+                    print("")
+                    os.system('killall -9 com.termux')
+                    print("")
+                    print("")
+                    print("")
+                    print("")
+                    print("\033[1;91m     Wrong Password")
+                    time.sleep(2)
 
-a = Ringo_System()
-a.From_Login()
+Ringo_System  = Ringo_System()
+Ringo_System.From_Login()

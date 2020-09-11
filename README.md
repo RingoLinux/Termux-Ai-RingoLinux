@@ -1,8 +1,7 @@
 # Termux-Ai-RingoLinux
 
-'''Có bao nhiêu loại AI?'''
+This code is created for the purpose of creating an AI Intelligence for Termux users to become better.
 
-Loại 1: Công nghệ AI phản ứng.
-Loại 2: Công nghệ AI với bộ nhớ hạn chế.
-Loại 3: Lý thuyết trí tuệ nhân tạo.
-Loại 4: Tự nhận thức.
+"" "The available functions include:" ""
+
+1. Login

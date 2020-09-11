@@ -5,9 +5,8 @@
   "maintainer": "@Tadashi-Ringo",
   "description": "Một Trí Tuệ AI,hỗ trợ người dùng Linux có trải nghiệm tốt hơn.",
   "arch": "all",
-  "depends": ["python"],
+  "depends": ["python,neofetch"],
   "files" :{
-    "Ringo-AI.py":"/data/data/com.termux/files/home/Termux-AI-RingoLinux",
-    "mylib.so": "lib/mylib.so"
-  }
+    "Ringo-AI.py":"/data/data/com.termux/files/home/Termux-AI-RingoLinux"
+}
 }
