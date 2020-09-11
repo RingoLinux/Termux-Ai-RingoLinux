@@ -1,8 +1,10 @@
 import os
 import time
 
-
-
+class Install_Systen:
+    pass
+class Setting_System:
+    pass
 class Text_Conversation:
     "Class khai báo những thành phần về chào hỏi."
     def __init__(self,Name_Object="Người nào đó",Age_Object=0):
@@ -29,6 +31,8 @@ class Ringo_System:
         if self.Login_Switch == "Off":
             print("Login không được bật,bạn có muốn mở nó lên hay không?") 
             self.Login_Switch_YN = input("Lựa chọn y/n: ")
+            time.sleep(1)
+            os.system("clear")
             if self.Login_Switch_YN == "y" or self.Login_Switch_YN == "Y":
                 self.Login_Switch = "On"
                 print("Công tắc đã được " + self.Login_Switch)
@@ -38,17 +42,21 @@ class Ringo_System:
                 print("Bạn đã lựa chọn từ chối!!")
                 time.sleep(1)
                 os.system("clear")
+        
         if self.Login_Switch == "On":
             User_Player = input("username: ")
             Password_Player = input("pasword: ")
-            if User_Player == self.User_Login and Password_Player == self.Password_Login:
-                print("Bạn đã đăng nhập thành công")
-                time.sleep(1)
-                os.system("clear")
-            else:
-                print("Bạn đã đăng nhập thất bại")
-                time.sleep(1)
-                os.system("clear")
+            while True:
+                if User_Player == self.User_Login and Password_Player == self.Password_Login:
+                    print("Bạn đã đăng nhập thành công")
+                    time.sleep(1)
+                    os.system("clear")
+                    break
+                else:
+                    print("Bạn đã đăng nhập thất bại")
+                    time.sleep(1)
+                    os.system("clear")
+                    contri
 
 a = Ringo_System()
 a.From_Login()
