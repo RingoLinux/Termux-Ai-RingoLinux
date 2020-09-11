@@ -44,19 +44,45 @@ class Ringo_System:
                 os.system("clear")
         
         if self.Login_Switch == "On":
-            User_Player = input("username: ")
-            Password_Player = input("pasword: ")
-            while True:
-                if User_Player == self.User_Login and Password_Player == self.Password_Login:
-                    print("Bạn đã đăng nhập thành công")
-                    time.sleep(1)
-                    os.system("clear")
-                    break
+            try:
+                self.User_Player = str(input('\033[1;92mUsername \033[1;93m: '))
+                print("")
+                self.Password_Player = getpass('\033[1;92mPassword \033[1;93m: ')
+                print ("")
+                if self.User_Player == self.User_Login and self.Password_Player == Password_Login:
+                   print('wait...')
+                   time.sleep(1)
+                   os.system('clear')
+                   print('')
+                   print('\033[1;92m ────────────────────────────────────── ')
+                   print("")
+                   break
                 else:
-                    print("Bạn đã đăng nhập thất bại")
-                    time.sleep(1)
-                    os.system("clear")
-                    contri
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      print("\033[1;91m     Wrong Password")
+                      time.sleep(2)
+                      print("")
+           except Exception:
+                      
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      print("\033[1;91m     Wrong Password")
+                      time.sleep(2)
+           except KeyboardInterrupt:
+                      print("")
+                      os.system('killall -9 com.termux')
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      print("\033[1;91m     Wrong Password")
+                      time.sleep(2)
 
 a = Ringo_System()
 a.From_Login()
